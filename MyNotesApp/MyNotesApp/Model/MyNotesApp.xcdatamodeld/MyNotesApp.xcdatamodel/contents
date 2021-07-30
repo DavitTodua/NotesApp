@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Note" representedClassName="Note" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="readNote" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ReadNote" inverseName="parentNote" inverseEntity="ReadNote"/>
+    </entity>
+    <entity name="ReadNote" representedClassName="ReadNote" syncable="YES" codeGenerationType="class">
+        <attribute name="textNote" attributeType="String"/>
+        <relationship name="parentNote" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="readNote" inverseEntity="Note"/>
+    </entity>
+    <elements>
+        <element name="Note" positionX="-220.6495971679688" positionY="17.38131713867188" width="128" height="73"/>
+        <element name="ReadNote" positionX="-36" positionY="18" width="128" height="59"/>
+    </elements>
+</model>
